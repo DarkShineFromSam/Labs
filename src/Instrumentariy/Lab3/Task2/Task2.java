@@ -63,7 +63,7 @@ package Instrumentariy.Lab3.Task2;
 
 public class Task2 {
     public static void main(String[] args) {
-        Bank bank = new Bank("Sber");
+        Bank bank = new Bank("Sberbank");
         Filial filial = new Filial(bank,"Sber1");
         Filial filial1 = new Filial(bank,"Sber2");
         Depositor depositor = new Depositor(filial,"Dep1");

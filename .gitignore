@@ -1,6 +1,7 @@
-.idea/
-out/*
-tpu/*
+.idea
+out/
+tpu/
+
+*.txt
 *.iml
 *.class
-out/production/TPU/Instrumentariy/

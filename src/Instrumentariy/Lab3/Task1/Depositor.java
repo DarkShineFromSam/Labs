@@ -1,15 +1,20 @@
 package Instrumentariy.Lab3.Task1;
 
 public class Depositor {
-    private String depositorName;
+    private String name;
     private int deposit;
 
-    public String getDepositorName() {
-        return depositorName;
+    // Constructor.
+    public Depositor(String name) {
+        this.name = name;
     }
 
-    public void setDepositorName(String depositorName) {
-        this.depositorName = depositorName;
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getDeposit() {

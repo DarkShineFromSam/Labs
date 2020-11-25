@@ -3,45 +3,47 @@ package Instrumentariy.Lab3.Task1;
 /**
  * Смоделировать структуру банка:
  * Класс            Свойства
- * ________________________________________________
+ * ------------------------------------------------
  * Банк	            название (get, set)
- * ________________________________________________
+ * ------------------------------------------------
  * Филиал	        название (get, set)
- *                  общая сумма вкладов (get, set)
- * _________________________________________________
+ * общая сумма вкладов (get, set)
+ * ------------------------------------------------
  * Вклад	        фио вкладчика (get, set)
- *                  сумма вклада (get, set)
- *__________________________________________________
- * Создать один объект класса Банк,
- * два объекта – Филиала,
+ * сумма вклада (get, set)
+ * ------------------------------------------------
+ * Создать:
+ * один объект типа `Банк`,
+ * два объекта типа `Филиал`,
  * и три вклада, задать значения свойств, вывести на экран.
  */
-public class Task1 {
+public class Task {
     public static void main(String[] args) {
-        Bank bank = new Bank();
-        Branch branch = new Branch();
-        Branch branch1 = new Branch();
-        Depositor depositor = new Depositor();
-        Depositor depositor1 = new Depositor();
-        Depositor depositor2 = new Depositor();
+        // Create a bank.
+        Bank cityBank = new Bank("Sberbank");
 
-        bank.setBankName("Sberbank");
-        branch.setBranchName("branch");
-        branch.setDeposits(5000);
-        branch1.setBranchName("branch1");
-        branch1.setDeposits(1000);
-        depositor.setDepositorName("depositor");
-        depositor.setDeposit(1000);
-        depositor1.setDepositorName("depositor1");
-        depositor1.setDeposit(1000);
-        depositor2.setDepositorName("deposito2");
-        depositor2.setDeposit(2000);
+        // Create branches.
+        Branch northBranch = new Branch("North branch", 0);
+        Branch southBranch = new Branch("South branch", 0);
 
-        System.out.println(bank.getBankName()+"\n"
-                +branch.getBranchName()+" "+branch.getDeposits()+"\n"
-                +branch1.getBranchName()+" "+branch1.getDeposits()+"\n"
-                +depositor.getDepositorName()+" "+depositor.getDeposit()+"\n"
-                +depositor1.getDepositorName()+" "+depositor1.getDeposit()+"\n"
-                +depositor2.getDepositorName()+" "+depositor2.getDeposit()+"\n");
+        // Create depositors.
+        Depositor depositorGazprom = new Depositor("Gazprom");
+        Depositor depositorBeeline = new Depositor("Beeline");
+        Depositor depositorMegafon = new Depositor("Megafon");
+
+        // Let depositors make a deposit to certain bank.
+        depositorGazprom.setDeposit(1000);
+        depositorBeeline.setDeposit(2000);
+        depositorMegafon.setDeposit(3000);
+
+        System.out.println("Bank: " + cityBank.getName() + "\n\n"
+                + "Branches: \n"
+                + northBranch.getName() + " -> " + northBranch.getDeposit() + "\n"
+                + southBranch.getName() + " -> " + southBranch.getDeposit() + "\n\n"
+                + "Deposits: \n"
+                + depositorGazprom.getName() + " -> " + depositorGazprom.getDeposit() + "\n"
+                + depositorBeeline.getName() + " -> " + depositorBeeline.getDeposit() + "\n"
+                + depositorMegafon.getName() + " -> " + depositorMegafon.getDeposit() + "\n"
+        );
     }
 }

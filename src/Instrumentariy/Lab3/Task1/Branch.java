@@ -1,22 +1,28 @@
 package Instrumentariy.Lab3.Task1;
 
 public class Branch {
-    private String branchName;
-    private int deposits;
+    private String name;
+    private int deposit;
 
-    public String getBranchName() {
-        return branchName;
+    // Constructor.
+    public Branch(String name, int deposit) {
+        this.name = name;
+        this.deposit = deposit;
     }
 
-    public void setBranchName(String branchName) {
-        this.branchName = branchName;
+    public String getName() {
+        return this.name;
     }
 
-    public int getDeposits() {
-        return deposits;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setDeposits(int deposits) {
-        this.deposits = deposits;
+    public int getDeposit() {
+        return this.deposit;
+    }
+
+    public void setDeposit(int deposit) {
+        this.deposit = deposit;
     }
 }

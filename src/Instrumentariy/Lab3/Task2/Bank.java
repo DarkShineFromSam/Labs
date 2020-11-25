@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Bank {
     private String name;
-    private List<Filial> filials;
+    private List<Filial> Filial;
 
     public Bank(String name) {
         this.name = name;
-        this.filials = new ArrayList<>();
+        this.Filial = new ArrayList<>();
     }
 
     public String getName() {
@@ -21,24 +21,21 @@ public class Bank {
     }
 
     public List<Filial> getFilials(){
-        return filials;
+        return Filial;
     }
 
     public void addFilial(Filial filial){
-        this.filials.add(filial);
+        this.Filial.add(filial);
         filial.setFilialName(filial.getFilialName());
         filial.setBank(this);
     }
 
     public void removeFelial(String filialName) {
-        filials.remove(filialName);
+        Filial.remove(filialName);
     }
 
     @Override
     public String toString() {
-        return "Bank{" +
-                "name='" + name + '\'' +
-                ",filials=" + filials +
-                '}';
+        return "\nBank: " + name + Filial;
     }
 }

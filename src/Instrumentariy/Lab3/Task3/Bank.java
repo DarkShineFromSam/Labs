@@ -1,15 +1,17 @@
 package Instrumentariy.Lab3.Task3;
 
+import org.w3c.dom.ls.LSException;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
     private String name;
-    private List<Filial> filials;
+    private List<Filial> filial;
 
     public Bank(String name) {
         this.name = name;
-        this.filials = new ArrayList<>();
+        this.filial = new ArrayList<>();
     }
 
     public String getName() {
@@ -21,26 +23,21 @@ public class Bank {
     }
 
     public List<Filial> getFilials(){
-        return filials;
+        return filial;
     }
 
     public void addFilial(Filial filial){
-        this.filials.add(filial);
+        this.filial.add(filial);
         filial.setFilialName(filial.getFilialName());
         filial.setBank(this);
     }
 
-
     public void removeFelial(String filialName) {
-        filials.remove(filialName);
+        filial.remove(filialName);
     }
-
 
     @Override
     public String toString() {
-        return "Bank{" +
-                "name='" + name + '\'' +
-                ",filials=" + filials +
-                '}';
+        return "\nBank: " + name + filial;
     }
 }

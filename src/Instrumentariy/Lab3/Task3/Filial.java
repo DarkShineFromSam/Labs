@@ -56,13 +56,19 @@ public class Filial {
         this.bank = bank;
     }
 
+    public String isContains(String search) {
+        for (Depositor i: myDepositors) {
+            if (i.getDepositorName().equals(search))
+                return i +" | Bank: " + this.getBank();
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
-        return "Filial{" +
-                "Название филиала='" + this +" "+ filialName + "\'" +
-                ", Баланс филиала=" + filialBalance +
-                ", Банк=" + bank.getName() +
-                ", Вкладчики=" + myDepositors +
-                '}';
+        return "\nFilial: " + filialName  +
+                " -> " + filialBalance +
+                "\nBank: " + bank.getName() +
+                "\n" + myDepositors;
     }
 }

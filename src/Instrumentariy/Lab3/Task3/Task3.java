@@ -1,7 +1,5 @@
 package Instrumentariy.Lab3.Task3;
 
-
-
 /**
  * Смоделировать структуру банка:
  * Класс            Свойства
@@ -21,21 +19,27 @@ package Instrumentariy.Lab3.Task3;
 
 public class Task3 {
     public static void main(String[] args) {
-        Bank bank = new Bank("Sber");
-        Filial filial = new Filial(bank,"Sber1");
-        Filial filial1 = new Filial(bank,"Sber2");
-        Depositor depositor = new Depositor(filial,"Dep1");
-        Depositor depositor1 = new Depositor(filial, "Dep2");
-        Depositor depositor2 = new Depositor(filial1,"Dep3");
-        Depositor depositor3 = new Depositor(filial1,"Dep4");
-        depositor.addDepositorSum(5000);
-        depositor1.addDepositorSum(4000);
-        depositor2.addDepositorSum(3000);
-        depositor3.addDepositorSum(2000);
+        // Create a bank.
+        Bank cityBank = new Bank("Sberbank");
 
-        depositor2.addDepositorSum(10000);
+        // Create filials.
+        Filial northBranch = new Filial(cityBank,"North branch");
+        Filial southBranch = new Filial(cityBank,"South branch");
 
-        System.out.println(filial);
+        // Create branches.
+        Depositor depositorGazprom = new Depositor(northBranch,"Gazprom");
+        Depositor depositorBeeline = new Depositor(northBranch, "Beeline");
+        Depositor depositorMegafon = new Depositor(southBranch,"Megafon");
+
+        // Let depositors add a deposit to certain bank.
+        depositorGazprom.addDepositorSum(5000);
+        depositorBeeline.addDepositorSum(4000);
+        depositorMegafon.addDepositorSum(3000);
+        depositorMegafon.addDepositorSum(10000);
+        //System.out.println(cityBank);
+        System.out.println(northBranch.isContains("Gazprom"));
+
+
 
     }
 }

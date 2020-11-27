@@ -58,11 +58,9 @@ public class Filial {
 
     @Override
     public String toString() {
-        return "Filial{" +
-                "Название филиала='" + filialName + "\'" +
-                ", Баланс филиала=" + filialBalance +
-                ", Банк=" + bank.getName() +
-                ", Вкладчики=" + myDepositors +
-                '}';
+        return "\nFilial: " + filialName  +
+                " -> " + filialBalance +
+                "\nBank: " + bank.getName() +
+                "\n" + myDepositors;
     }
 }

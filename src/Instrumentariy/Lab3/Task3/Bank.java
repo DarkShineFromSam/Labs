@@ -1,43 +1,43 @@
 package Instrumentariy.Lab3.Task3;
 
-import org.w3c.dom.ls.LSException;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
-    private String name;
-    private List<Filial> filial;
+    private final String name;
+    private final List<Branch> branches;
 
     public Bank(String name) {
         this.name = name;
-        this.filial = new ArrayList<>();
+        this.branches = new ArrayList<>();
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public List<Branch> getBranches() {
+        return this.branches;
     }
 
-    public List<Filial> getFilials(){
-        return filial;
+    public void addBranch(Branch branch) {
+        this.branches.add(branch);
     }
 
-    public void addFilial(Filial filial){
-        this.filial.add(filial);
-        filial.setFilialName(filial.getFilialName());
-        filial.setBank(this);
+    public void removeBranch(Branch branch) {
+        this.branches.remove(branch);
     }
 
-    public void removeFelial(String filialName) {
-        filial.remove(filialName);
-    }
+    public void findDepositByName(String depositorName) {
+        for (Branch branch : branches) {
+            Deposit deposit = branch.getDeposit(depositorName);
 
-    @Override
-    public String toString() {
-        return "\nBank: " + name + filial;
+
+            if (deposit != null) {
+                String branchName = branch.getName();
+
+                System.out.println(branchName + " | " + deposit.getName() + " | " + deposit.getDeposit());
+            }
+        }
     }
 }

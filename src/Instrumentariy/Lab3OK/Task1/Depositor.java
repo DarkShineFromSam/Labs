@@ -1,13 +1,12 @@
-package Instrumentariy.Lab3.Task1;
+package Instrumentariy.Lab3OK.Task1;
 
-public class Branch {
+public class Depositor {
     private String name;
     private int deposit;
 
     // Constructor.
-    public Branch(String name, int deposit) {
+    public Depositor(String name) {
         this.name = name;
-        this.deposit = deposit;
     }
 
     public String getName() {
@@ -19,7 +18,7 @@ public class Branch {
     }
 
     public int getDeposit() {
-        return this.deposit;
+        return deposit;
     }
 
     public void setDeposit(int deposit) {

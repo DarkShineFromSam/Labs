@@ -1,4 +1,4 @@
-package Instrumentariy.Lab3.Task1;
+package Instrumentariy.Lab3OK.Task1;
 
 /**
  * Смоделировать структуру банка:

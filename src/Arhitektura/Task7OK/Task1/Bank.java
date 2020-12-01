@@ -1,4 +1,4 @@
-package Instrumentariy.Lab3.Task1;
+package Arhitektura.Task7OK.Task1;
 
 public class Bank {
     private String name;

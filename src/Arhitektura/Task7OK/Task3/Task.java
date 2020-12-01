@@ -1,4 +1,4 @@
-package Instrumentariy.Lab3.Task3;
+package Arhitektura.Task7OK.Task3;
 
 /**
  * Смоделировать структуру банка:

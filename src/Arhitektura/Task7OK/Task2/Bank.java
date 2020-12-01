@@ -1,11 +1,11 @@
-package Instrumentariy.Lab3.Task2;
+package Arhitektura.Task7OK.Task2;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
     private String name;
-    private List<Filial> Filial;
+    private final List<Filial> Filial;
 
     public Bank(String name) {
         this.name = name;
@@ -30,7 +30,7 @@ public class Bank {
         filial.setBank(this);
     }
 
-    public void removeFelial(String filialName) {
+    public void removeFelial(Filial filialName) {
         Filial.remove(filialName);
     }
 

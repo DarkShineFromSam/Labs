@@ -1,12 +1,13 @@
 
-package Instrumentariy.Lab3.Task3;
+package Arhitektura.Task7OK.Task3;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Branch {
     private String name;
     private int balance;
-    private final HashMap<String, Deposit> deposits = new HashMap<>();
+    private final List<Deposit> deposits = new ArrayList<>();
 
     public Branch(String name, int balance) {
         this.name = name;
@@ -28,10 +29,15 @@ public class Branch {
     }
 
     public void addDeposit(Deposit deposit) {
-        this.deposits.put(deposit.getName(), deposit);
+        this.deposits.add(deposit);
     }
 
     public Deposit getDeposit(String depositorName) {
-        return this.deposits.get(depositorName);
+        for (Deposit i : deposits){
+            if (i.getName().equals(depositorName)){
+                return i;
+            }
+        }
+        return null;
     }
 }

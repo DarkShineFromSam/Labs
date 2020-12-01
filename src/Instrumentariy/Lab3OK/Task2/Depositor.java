@@ -1,15 +1,14 @@
-package Instrumentariy.Lab3.Task2;
+package Instrumentariy.Lab3OK.Task2;
 
 public class Depositor {
     private String depositorName;
     private int depositorSum;
-    private Filial filial;
+    private final Filial filial;
 
 
     public Depositor(Filial filial, String depositorName) {
         this.filial = filial;
         this.depositorName = depositorName;
-        this.depositorSum = depositorSum;
         filial.addMyDepositor(this);
         filial.setFilialBalance(filial.getFilialBalance()+depositorSum);
     }

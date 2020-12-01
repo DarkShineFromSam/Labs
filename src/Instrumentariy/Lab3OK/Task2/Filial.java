@@ -1,5 +1,5 @@
 
-package Instrumentariy.Lab3.Task2;
+package Instrumentariy.Lab3OK.Task2;
 
 import java.util.ArrayList;
 import java.util.List;

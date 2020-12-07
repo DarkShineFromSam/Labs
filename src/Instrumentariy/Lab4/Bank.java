@@ -1,13 +1,43 @@
 package Instrumentariy.Lab4;
 
-public class Bank {
-    private String name;
+import java.util.ArrayList;
+import java.util.List;
 
-    public String getName() {
-        return name;
+public class Bank {
+    private final String name;
+    private final List<Branch> branches;
+
+    public Bank(String name) {
+        this.name = name;
+        this.branches = new ArrayList<>();
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getName() {
+        return this.name;
+    }
+
+    public List<Branch> getBranches() {
+        return this.branches;
+    }
+
+    public void addBranch(Branch branch) {
+        this.branches.add(branch);
+    }
+
+    public void removeBranch(Branch branch) {
+        this.branches.remove(branch);
+    }
+
+    public void findDepositByName(String depositorName) {
+        for (Branch branch : branches) {
+            Contribution contribution = branch.getDeposit(depositorName);
+
+
+            if (contribution != null) {
+                String branchName = branch.getName();
+
+                System.out.println(branchName + " | " + contribution.getName() + " | " + contribution.getDeposit());
+            }
+        }
     }
 }

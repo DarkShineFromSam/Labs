@@ -58,7 +58,7 @@ public class Task2 {
         depositorMegafon.addDepositorSum(3000);
         depositorMegafon.addDepositorSum(10000);
 
-        System.out.println(northBranch);
+        System.out.println(cityBank);
 
     }
 }

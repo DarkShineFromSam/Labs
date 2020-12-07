@@ -6,10 +6,10 @@ package Instrumentariy.Lab4;
   Банк	            название (get, set)
   --------------------------------------------------
   Филиал	        название (get, set)
-                   общая сумма вкладов (get, set)
+                    общая сумма вкладов (get, set)
   --------------------------------------------------
-  Вклад	        фио вкладчика (get, set)
-                   сумма вклада (get, set)
+  Вклад	            фио вкладчика (get, set)
+                    сумма вклада (get, set)
   --------------------------------------------------
  */
 
@@ -35,7 +35,30 @@ package Instrumentariy.Lab4;
 public class Task {
     public static void main(String[] args) {
 
-        Bank sberbank = new Bank();
-        sberbank.setName("Сбербанк");
+        Bank sberbank = new Bank("Сбер");
+
+        Branch branch = new Branch("South Branch",0);
+
+        // Add Branch to Bank
+        sberbank.addBranch(branch);
+
+        LongContribution gazprom = new LongContribution("Gazprom",100000);
+        LongContribution lukoil = new LongContribution("Lukoil",25000);
+
+        DemandDeposit mts = new DemandDeposit("MTS", 1000);
+        DemandDeposit megafon = new DemandDeposit("Megafon", 21000);
+        DemandDeposit svaznoy = new DemandDeposit("Svaznoy",35000);
+
+        branch.addDeposit(gazprom);
+        branch.addDeposit(lukoil);
+        branch.addDeposit(mts);
+        branch.addDeposit(megafon);
+        branch.addDeposit(svaznoy);
+
+        // Add contribution to branch
+        mts.calculate(10);
+        System.out.println(mts.getDeposit());
+
+
     }
 }

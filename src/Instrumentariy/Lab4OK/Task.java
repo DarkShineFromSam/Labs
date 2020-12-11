@@ -1,4 +1,4 @@
-package Instrumentariy.Lab4;
+package Instrumentariy.Lab4OK;
 
 /*
   Классы	        Свойства
@@ -42,12 +42,12 @@ public class Task {
         // Add Branch to Bank
         sberbank.addBranch(branch);
 
-        LongContribution gazprom = new LongContribution("Gazprom",100000);
-        LongContribution lukoil = new LongContribution("Lukoil",25000);
+        LongContribution gazprom = new LongContribution(branch,"Gazprom",100000);
+        LongContribution lukoil = new LongContribution(branch,"Lukoil",25000);
 
-        DemandDeposit mts = new DemandDeposit("MTS", 1000);
-        DemandDeposit megafon = new DemandDeposit("Megafon", 21000);
-        DemandDeposit svaznoy = new DemandDeposit("Svaznoy",35000);
+        DemandDeposit mts = new DemandDeposit(branch,"MTS", 1000);
+        DemandDeposit megafon = new DemandDeposit(branch,"Megafon", 21000);
+        DemandDeposit svaznoy = new DemandDeposit(branch,"Svaznoy",35000);
 
         branch.addDeposit(gazprom);
         branch.addDeposit(lukoil);
@@ -57,7 +57,7 @@ public class Task {
 
         // Add contribution to branch
         mts.calculate(10);
-        System.out.println(mts.getDeposit());
+        System.out.println(sberbank);
 
 
     }

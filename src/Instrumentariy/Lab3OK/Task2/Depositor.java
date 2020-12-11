@@ -36,7 +36,7 @@ public class Depositor {
     @Override
     public String toString() {
         return "\nDepositor:\n" + depositorName  +
-                " -> " + depositorSum +
-                " - Filial: " + filial.getFilialName();
+                ": " + depositorSum +
+                " | Filial: " + filial.getFilialName();
     }
 }

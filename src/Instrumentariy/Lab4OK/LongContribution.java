@@ -1,11 +1,11 @@
-package Instrumentariy.Lab4;
+package Instrumentariy.Lab4OK;
 
 public class LongContribution extends Contribution {
 
-    public LongContribution(String depositorName, int deposit) {
-        super(depositorName, deposit);
+    public LongContribution(Branch branch, String depositorName, int deposit) {
+        super(branch, depositorName, deposit);
     }
-    //
+
     @Override
     public void calculate(int month) {
         if (month > 12) {

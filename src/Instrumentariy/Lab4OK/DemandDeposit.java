@@ -1,9 +1,10 @@
-package Instrumentariy.Lab4;
+package Instrumentariy.Lab4OK;
 
 public class DemandDeposit extends Contribution{
 
-    public DemandDeposit(String depositorName, int deposit) {
-        super(depositorName, deposit);
+
+    public DemandDeposit(Branch branch, String depositorName, int deposit) {
+        super(branch, depositorName, deposit);
     }
 
     @Override
@@ -13,5 +14,4 @@ public class DemandDeposit extends Contribution{
         }
         setDeposit(getDeposit() + getPercent());
     }
-
 }

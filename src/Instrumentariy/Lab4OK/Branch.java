@@ -1,5 +1,5 @@
 
-package Instrumentariy.Lab4;
+package Instrumentariy.Lab4OK;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,5 +44,12 @@ public class Branch {
                 return i;
         }
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return  "Филиал:   " + name +
+                "| Баланс: " + balance +" "
+                + contributions;
     }
 }

@@ -36,6 +36,6 @@ public class Bank {
 
     @Override
     public String toString() {
-        return "\nBank: " + name + Filial;
+        return "\nBank:     " + name + Filial;
     }
 }

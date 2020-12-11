@@ -1,4 +1,4 @@
-package Instrumentariy.Lab4;
+package Instrumentariy.Lab4OK;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,5 +39,11 @@ public class Bank {
                 System.out.println(branchName + " | " + contribution.getName() + " | " + contribution.getDeposit());
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return  "Банк:    " + name +
+                '\n' + branches;
     }
 }
